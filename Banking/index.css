@@ -1,0 +1,23 @@
+body{
+background: linear-gradient(rgba(0,0,50,0.5),rgba(0,0,50,0.5));
+}
+.first{
+    height: 250px;
+    text-align: center;
+    margin:150px auto;
+    float: none;
+    background:rgba(211,211,211,0.5);
+    max-width: 500px;
+    /*padding: 30px; */ 
+}
+.h31{
+    padding:15px 10px 10px 10px !important;
+}
+
+.form_control{
+    background: transparent !important;
+}
+.mr-2{
+    padding:10px 10px 10px 0px !important
+}
+
