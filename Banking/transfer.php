@@ -69,6 +69,13 @@
                    ':balance'=>$balance,
                    ':AcNo'=>$senderAcNo
            ));
+           $tstmt=$pdo->prepare('INSERT INTO transfer(sender,reciever,balance_transfer,transfer_on) VALUES (:sender,:reciever,:balance,:transfer_on)');
+           $tstmt->execute(array(
+              ':sender'=>$senderAcNo,
+              ':reciever'=>$recieverAcNo,
+              ':balance'=>$balancesend,
+              ':transfer_on'=>date('Y-m-d h:m:s')
+           )); 
            $_SESSION['success']="Successful transction done from '".$senderAcNo."' to '".$recieverAcNo."' ";
            header('Location:customer.php');
            return;
